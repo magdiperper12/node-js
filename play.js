@@ -63,9 +63,21 @@
 //   }),
 // );
 
+// const schoole = ["ahmed", "magdi", "ammer", "adel", "hammdey"];
 
-const schoole = ["ahmed", "magdi", "ammer", "adel", "hammdey"];
-const isgo = schoole.some((scol) => scol.includes("m"));
-if (isgo) {
-  console.log(schoole.filter((scol) => scol.includes("mm")));
-}
+// console.log(schoole.filter((scol) => scol.includes("mm")));
+
+// schoole.push("saaaad");
+
+// console.log(schoole);
+
+// console.log(schoole.slice(1, 2));
+
+const schoole = ["ahmed", "magdi", "ammer"];
+const newSchoole = [...schoole, "adel", "hammdey"];
+console.log(newSchoole.slice(1, 4));
+
+const arrow = (...argumentwww) => {
+  return console.log(argumentwww);
+};
+arrow("ahmed", "adel",  "heommos","abdo", "heommos");
