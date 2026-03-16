@@ -3,6 +3,9 @@
 // const country = "egypt";
 // let isHopies = true;
 
+const { rejects } = require("node:assert");
+const { resolve } = require("node:dns");
+
 // age = 26;
 // function showDetailes(username, userage, usercountry, userhobies) {
 //   // this is parameters
@@ -73,11 +76,76 @@
 
 // console.log(schoole.slice(1, 2));
 
-const schoole = ["ahmed", "magdi", "ammer"];
-const newSchoole = [...schoole, "adel", "hammdey"];
-console.log(newSchoole.slice(1, 4));
+// const schoole = ["ahmed", "magdi", "ammer"];
+// const newSchoole = [...schoole, "adel", "hammdey"];
+// console.log(newSchoole.slice(1, 4));
 
-const arrow = (...argumentwww) => {
-  return console.log(argumentwww);
+// const arrow = (...argumentwww) => {
+//   return console.log(argumentwww);
+// };
+// arrow("ahmed", "adel",  "heommos","abdo", "heommos");
+
+// const person = {
+//   name: "magdi",
+//   age: 26,
+//   city: "cairo",
+//   getInfo() {
+//     return `my name is ${this.name} and my age is ${this.age} and my city is ${this.city}`;
+//   },
+// };
+
+// console.log(person.getInfo());
+
+// console.log(person.name);
+// console.log(Object.values(person));
+// console.log(Object.keys(person));
+// console.log(person);
+
+// function showData(personData) {
+//   console.log(personData);
+// }
+
+// showData(person.age);
+
+// const showData = () => {
+//   const data = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("hello bro");
+//     }, 2000);
+//   });
+//   return data;
+// };
+
+// setTimeout(() => {
+//   console.log("this is my heart");
+//   showData()
+//     .then((text) => {
+//       console.log(text);
+//       return showData();
+//     })
+//     .then((text) => {
+//       console.log(text);
+//     });
+// }, 2000);
+
+const fetchData = () => {
+  const data = new Promise((resolve, rejects) => {
+    setTimeout(() => {
+      resolve("Done ..!");
+    }, 2000);
+  });
+  return data;
 };
-arrow("ahmed", "adel",  "heommos","abdo", "heommos");
+
+setTimeout(() => {
+  console.log("from set time out");
+  fetchData()
+    .then((text) => {
+      console.log(text);
+      return fetchData();
+    })
+    .then(() => {
+      console.log("hello");
+      return fetchData();
+    });
+}, 2000);
