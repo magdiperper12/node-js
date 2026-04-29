@@ -2,8 +2,19 @@
 // Server → Processing → Response
 // Browser → Render
 
+client => requist => server => response => client
+this is program lifecycle
 =====================================================================
 
+Types of error
+Syntax Error قبل التشغيل الكود نفسه غلط
+Runtime Error أثناء التشغيل البرنامج وقع
+Logic Error بعد التشغيل النتيجة غلط
+Type Error استخدام نوع بيانات غلط
+Reference Error متغير غير معرف (variable not defind)
+Range Error قيمة خارج المدى (array with negative number)
+
+=====================================================================
 🔍 السطر ده بيعمل إيه؟
 
 URLSearchParams بيحوّل الـ string ده إلى object تقدر تتعامل معاه بسهولة

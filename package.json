@@ -1,0 +1,28 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "hello this backend nodejs track course",
+  "keywords": [
+    "hello"
+  ],
+  "homepage": "https://github.com/magdiperper12/node-js#readme",
+  "bugs": {
+    "url": "https://github.com/magdiperper12/node-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magdiperper12/node-js.git"
+  },
+  "license": "ISC",
+  "author": "magdi perper",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "please-start": "nodemon index.js"
+  },
+  "_comment":"to run just use npm start or npm run please-start",
+  "dependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
